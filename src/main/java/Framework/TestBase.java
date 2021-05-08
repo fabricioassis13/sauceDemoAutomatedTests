@@ -23,5 +23,6 @@ public class TestBase extends DriverManager{
     @AfterEach
     public void tearDown(){
         quitDriver();
+        Report.close();
     }
 }
