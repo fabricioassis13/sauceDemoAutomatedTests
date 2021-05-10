@@ -18,4 +18,8 @@ public class InventoryPage {
     public WebElement getProductsHeaderTextLabel(){
         return waits.visibilityOfElement(By.className("title"));
     }
+
+    public WebElement getSauceLabsBackpackImageLink(){
+        return waits.visibilityOfElement(By.id("item_4_img_link"));
+    }
 }

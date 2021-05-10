@@ -18,11 +18,11 @@ public class LoginValidations extends TasksAbstraction {
         this.driver = driver;
     }
 
-    public void validateLoginSuccess(){
+    protected void validateLoginSuccess(){
         try{
             String label = inventoryPage.getProductsHeaderTextLabel().getText();
             Assertions.assertEquals("PRODUCTS", label);
-            Highlights.highLighterMethod(driver, inventoryPage.getProductsHeaderTextLabel());
+            Highlights.highLighterMethod(driver, inventoryPage.getProductsHeaderTextLabel(), "red");
             Report.log(Status.PASS, "Login realizado!", Screenshot.fullPageBase64(driver));
         }catch (Exception e){
             Report.log(Status.FAIL, "Login falhou!", Screenshot.fullPageBase64(driver));
