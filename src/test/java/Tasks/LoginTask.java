@@ -18,10 +18,9 @@ public class LoginTask extends LoginValidations {
     }
 
     public void doLogin(){
-        waits.loadElement(loginPage.userNameTextField);
-        loginPage.userNameTextField.sendKeys("standard_user");
-        loginPage.passwordTextField.sendKeys("secret_sauce");
-        loginPage.loginButton.click();
+        loginPage.getUserNameTextField().sendKeys("standard_user");
+        loginPage.getPasswordTextField().sendKeys("secret_sauce");
+        loginPage.getLoginButton().click();
 
         validateLoginSuccess();
     }
